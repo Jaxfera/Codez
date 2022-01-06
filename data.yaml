@@ -1,0 +1,89 @@
+- name: normal
+  effective: [ rock, steel ]
+  not_effective: []
+  no_effect: [ ghost ]
+
+- name: fire
+  effective: [ grass, ice, bug, steel ]
+  not_effective: [ fire, water, rock, dragon ]
+  no_effect: []
+
+- name: water
+  effective: [ fire, ground, rock ]
+  not_effective: [ water, grass, dragon ]
+  no_effect: []
+
+- name: electric
+  effective: [ water, flying ]
+  not_effective: [ electric, grass, dragon ]
+  no_effect: []
+
+- name: grass
+  effective: [ water, ground, rock ]
+  not_effective: [ fire, grass, poison, flying, bug, dragon, steel ]
+  no_effect: []
+
+- name: ice
+  effective: [ grass, ground, flying, dragon ]
+  not_effective: [ fire, water, ice, steel ]
+  no_effect: []
+
+- name: fighting
+  effective: [ normal, ice, rock, dark, steel ]
+  not_effective: [ poison, flying, psychic, bug, fairy ]
+  no_effect: [ ghost ]
+
+- name: poison
+  effective: [ grass, fairy ]
+  not_effective: [ poison, ground, rock, ghost ]
+  no_effect: [ steel ]
+
+- name: ground
+  effective: [ fire, electric, poison, rock, steel ]
+  not_effective: [ grass, bug ]
+  no_effect: [ flying ]
+
+- name: flying
+  effective: [ grass, fighting, bug ]
+  not_effective: [ electric, rock, steel ]
+  no_effect: []
+
+- name: psychic
+  effective: [ fighting, poison ]
+  not_effective: [ psychic, steel ]
+  no_effect: [ dark ]
+
+- name: bug
+  effective: [ grass, psychic, dark ]
+  not_effective: [ fire, fighting, poison, flying, ghost, steel, fairy ]
+  no_effect: []
+
+- name: rock
+  effective: [ fire, ice, flying, bug ]
+  not_effective: [ fighting, ground, steel ]
+  no_effect: []
+
+- name: ghost
+  effective: [ psychic, ghost ]
+  not_effective: [ dark ]
+  no_effect: [ normal ]
+
+- name: dragon
+  effective: [ dragon ]
+  not_effective: [ steel ]
+  no_effect: [ fairy ]
+
+- name: dark
+  effective: [ psychic, ghost ]
+  not_effective: [ fighting, dark, fairy ]
+  no_effect: []
+  
+- name: steel
+  effective: [ ice, rock, fairy ]
+  not_effective: [ fire, water, electric, steel ]
+  no_effect: []
+
+- name: fairy
+  effective: [ fighting, dragon, dark ]
+  not_effective: [ fire, poison, steel ]
+  no_effect: []
